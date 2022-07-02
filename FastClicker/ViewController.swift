@@ -22,7 +22,6 @@ class ViewController: NSViewController {
 
     }
     let downUpDelay = 0.005
-    let maxClicks = 100
     var numClicks = 0
 
     @IBOutlet weak var outputLabel: NSTextFieldCell!
@@ -32,6 +31,14 @@ class ViewController: NSViewController {
         let loc = NSEvent.mouseLocation
         let screenHeight = NSScreen.main!.frame.height
         return CGPoint(x: loc.x, y: screenHeight - loc.y)
+    }
+
+    var outputText: String {
+        """
+        clicks: \(numClicks)
+        Press ` to toggle clicking.
+        The number below is clicks per second, and can be changed.
+        """
     }
 
     override func viewDidLoad() {
@@ -49,10 +56,7 @@ class ViewController: NSViewController {
         if self.running {
             self.doClick()
             numClicks += 1
-            outputLabel.title = "clicks: \(numClicks)"
-//            if numClicks > maxClicks {
-//                running = false
-//            }
+            outputLabel.title = outputText
         }
     }
 

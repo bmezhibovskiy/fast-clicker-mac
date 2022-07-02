@@ -710,12 +710,15 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="EOz-82-cLO">
-                                <rect key="frame" x="14" y="37" width="452" height="300"/>
+                                <rect key="frame" x="14" y="37" width="452" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="aID-mJ-xeH"/>
+                                    <constraint firstAttribute="height" constant="100" id="aID-mJ-xeH"/>
                                 </constraints>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="Press ` to toggle clicking" id="5fX-yN-Sax">
+                                <textFieldCell key="cell" lineBreakMode="clipping" id="5fX-yN-Sax">
                                     <font key="font" usesAppearanceFont="YES"/>
+                                    <string key="title">clicks: 0
+Press ` to toggle clicking.
+The number below is clicks per second, and can be changed.</string>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>

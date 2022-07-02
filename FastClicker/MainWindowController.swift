@@ -8,7 +8,10 @@
 import Cocoa
 
 class MainWindowController: NSWindowController {
-
+    override func windowDidLoad() {
+        super.windowDidLoad()
+        window?.level = .init(rawValue: Int(CGShieldingWindowLevel()) + 1)
+    }
 }
 extension MainWindowController: NSWindowDelegate {
     func windowShouldClose(_ sender: NSWindow) -> Bool {
